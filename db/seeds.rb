@@ -20,6 +20,8 @@ movies = movie['results']
 
 puts 'cleaning db'
 Movie.destroy_all
+List.destroy_all
+Bookmark.destroy_all
 
 puts 'loading 15 movies'
 15.times do
@@ -53,4 +55,12 @@ puts 'creating lists'
     name: Faker::Cannabis.health_benefit
   )
 end
+
+puts 'creating bookmarks!'
+  Bookmark.create!(
+    comment: 'wowza what a show',
+    list_id: 13,
+    movie_id: 216
+  )
+
 puts 'All done!'
