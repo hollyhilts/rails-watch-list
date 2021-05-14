@@ -19,9 +19,9 @@ movies = movie['results']
 # pp "https://image.tmdb.org/t/p/w500#{movies[count]['poster_path']}"
 
 puts 'cleaning db'
-Movie.destroy_all
-List.destroy_all
-Bookmark.destroy_all
+# Movie.destroy_all
+# List.destroy_all
+# Bookmark.destroy_all
 
 puts 'loading 15 movies'
 15.times do
@@ -52,15 +52,15 @@ end
 puts 'creating lists'
 5.times do
   List.create!(
-    name: Faker::Cannabis.health_benefit
+    name: rand([])
   )
 end
 
 puts 'creating bookmarks!'
   Bookmark.create!(
     comment: 'wowza what a show',
-    list_id: 13,
-    movie_id: 35
+    list_id: 3,
+    movie_id: 10
   )
 
 puts 'All done!'

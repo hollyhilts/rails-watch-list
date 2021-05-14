@@ -7,8 +7,8 @@ class BookmarksController < ApplicationController
   def create
     # raise
     @list = List.find(params[:list_id])
-    @movie = Movie.find(params[:bookmark][:movie_id])
-    @bookmark = Bookmark.new(movie: @movie, list: @list)
+    @bookmark = Bookmark.new(bookmark_params)
+    @bookmark.list = @list
     if @bookmark.save
       redirect_to list_path(@list)
     else
@@ -26,6 +26,6 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:movie_id, :list_id, :comment)
+    params.require(:bookmark).permit(:movie_id, :comment)
   end
 end
