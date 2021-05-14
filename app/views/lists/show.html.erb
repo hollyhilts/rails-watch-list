@@ -3,10 +3,12 @@
 <%= link_to 'back to lists', root_path %>
 
 <%= link_to 'add a bookmark', new_list_bookmark_path(@list) %>
-
-<% @list.bookmarks.each do |bookmark| %>
-<div class="card col-4">
-  <h2><%= bookmark.comment %></h2>
-  <p><%= bookmark.movie.title %></p>
+<div class="container d-flex">
+  <% @list.bookmarks.each do |bookmark| %>
+  <div class="card">
+    <h3><%= bookmark.movie.title %></h3>
+    <p><%= bookmark.comment %></p>
+    <img src="<%= bookmark.movie.poster_url %>">
+  </div>
+  <% end %>
 </div>
-<% end %>
