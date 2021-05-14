@@ -13,6 +13,26 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <a class="navbar-brand" href="#">
+        <img src="https://lh3.googleusercontent.com/proxy/94h7KSvRTzv4wUTO-cMBk55NzG_voDcWUQrZxKDmTJZtVnfh6l3NNzBRzE_FXxI0Lipi-8IaqP-9qBXacjxc4eUYlFdbQizX8YxHk7B5L3QH0lB-be7R_G8yvEDvNi5AsddF57guC0f6" />
+    </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <p class="nav-link mb-0"><%= link_to 'my lists', lists_path %></p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link mb-0"><%= link_to 'new list', new_list_path %></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

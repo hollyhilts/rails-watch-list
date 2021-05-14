@@ -1,7 +1,15 @@
-<h1>my lists</h1>
+<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmlsbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80');">
+  <div class="container">
+    <h1>welcome to the jungle</h1>
+  </div>
+</div>
 
-<%= link_to 'create new list', new_list_path %>
+<div class="container d-flex">
 
-<% @lists.each do |list| %>
-  <p><%= link_to list.name, list_path(list) %></p>
-<% end %>
+  <% @lists.each do |list| %>
+    <div class="card-category col-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key, crop: :fill %>)">
+      <p><%= link_to list.name, list_path(list) %></p>
+    </div>
+  <% end %>
+
+</div>

@@ -17,6 +17,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
+    # raise
     @bookmark = Bookmark.find(params[:id])
     @list = @bookmark.list
     @bookmark.destroy
