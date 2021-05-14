@@ -3,6 +3,7 @@
 <%= link_to 'back to lists', root_path %>
 
 <%= link_to 'add a bookmark', new_list_bookmark_path(@list) %>
+
 <div class="container d-flex">
   <% @list.bookmarks.each do |bookmark| %>
   <div class="card">
