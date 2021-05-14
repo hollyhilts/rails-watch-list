@@ -60,7 +60,7 @@ puts 'creating bookmarks!'
   Bookmark.create!(
     comment: 'wowza what a show',
     list_id: 13,
-    movie_id: 216
+    movie_id: 35
   )
 
 puts 'All done!'
